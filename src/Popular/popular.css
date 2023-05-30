@@ -1,0 +1,66 @@
+.user-cards-container{
+    margin-top: 30px;
+    /* overflow-x: auto; */
+    background-color: black;
+    /* height: fit-content;
+    overflow-y: hidden; */
+}
+.user-cards{
+    display: flex;
+    /* overflow: auto; */
+    /* width: 100vw; */
+   
+}
+/* .user-card{
+    
+    margin-left: 20px;
+    flex-shrink: 0;
+} */
+.thumbnail-card{
+    width: 250px;
+    height: 150px;
+}
+.overlay-button-left{
+    position: absolute;
+    color: red;
+    top: 620px;
+    margin: 12px;
+    cursor: pointer;
+}
+
+.overlay-button-right{
+    position: absolute;
+    right: 0;
+    color: red;
+    top: 620px;
+    margin: 12px;
+    cursor: pointer;
+}
+.user-card{
+    position: relative;
+    display: block;
+    flex: 1 1 0px;
+    transition: transform 450ms;
+    margin-left: 20px;
+}
+
+.user-cards:focus-within .user-card,
+.user-cards:hover .user-card{
+    transform: translateX(-25%);
+}
+
+.user-card:focus ~ .user-card,
+.user-card:hover ~ .user-card{
+    transform: translateX(25%);
+}
+
+.user-cards .user-card:focus,
+.user-cards .user-card:hover{
+    transform: scale(1.5);
+    z-index: 1;
+}
+
+.user-card img{
+    display: block;
+    max-width: 200px;
+}
